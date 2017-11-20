@@ -47,17 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstration\IAuthenticateRepository.cs" />
+    <Compile Include="Abstration\ICategoryRepository.cs" />
+    <Compile Include="Abstration\IOrderRepository.cs" />
+    <Compile Include="Abstration\IProductRepository.cs" />
+    <Compile Include="Abstration\IRepository.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Implementation\AuthenticateRepository.cs" />
+    <Compile Include="Implementation\CategoryRepository.cs" />
+    <Compile Include="Implementation\OrderRepository.cs" />
+    <Compile Include="Implementation\ProductRepository.cs" />
+    <Compile Include="Implementation\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Abstration\" />
-    <Folder Include="Implementation\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\GroceryMart.DAL\GroceryMart.DAL.csproj">
       <Project>{db279afa-2df5-413f-a2ce-932b1d7dd994}</Project>

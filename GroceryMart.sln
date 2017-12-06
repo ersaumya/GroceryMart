@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryMart.DAL", "GroceryMart.DAL\GroceryMart.DAL.csproj", "{DB279AFA-2DF5-413F-A2CE-932B1D7DD994}"
 EndProject
@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryMart.DomainModels", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryMart.WebAPI", "GroceryMart.WebAPI\GroceryMart.WebAPI.csproj", "{CA133C72-33F0-4677-92DD-4F720E8ACA76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryMart.WepApp", "GroceryMart.WepApp\GroceryMart.WepApp.csproj", "{C73083F3-D8E4-48B3-9A3C-EB46BC026ECB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryMart.WebApp", "GroceryMart.WebApp\GroceryMart.WebApp.csproj", "{A5066D0E-4627-48FB-9641-B9D75A9237FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{CA133C72-33F0-4677-92DD-4F720E8ACA76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA133C72-33F0-4677-92DD-4F720E8ACA76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA133C72-33F0-4677-92DD-4F720E8ACA76}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C73083F3-D8E4-48B3-9A3C-EB46BC026ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C73083F3-D8E4-48B3-9A3C-EB46BC026ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C73083F3-D8E4-48B3-9A3C-EB46BC026ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C73083F3-D8E4-48B3-9A3C-EB46BC026ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5066D0E-4627-48FB-9641-B9D75A9237FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5066D0E-4627-48FB-9641-B9D75A9237FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5066D0E-4627-48FB-9641-B9D75A9237FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5066D0E-4627-48FB-9641-B9D75A9237FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,32 @@
+﻿@inherits GroceryMart.WebApp.Security.CustomBasePage
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("GroceryMart", "Index", "App", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav pull-right">
+                @if (CurrentUser != null)
+                {
+                    <li style="padding:15px; color:white">
+                        Welcome : @CurrentUser.Name
+                    </li>
+                        <li>
+                            @Html.ActionLink("SignOut", "SignOut", "Account", new { area = "" }, null)
+                        </li>
+                }
+                <li *ngIf="cart!=undefined && cart.TotalItems>0">
+                    <a [routerLink]="['/cart']">{{cart.TotalItems}} Items | Rs. {{cart.Total}} </a>
+                </li>
+            </ul>
+            
+
+        </div>
+    </div>
+</div>
+

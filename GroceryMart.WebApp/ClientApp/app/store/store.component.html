@@ -1,0 +1,20 @@
+﻿<h1>Products</h1>
+<table class="table table-bordered">
+    <tr>
+        <td>SNo.</td>
+        <td>Name</td>
+        <td>Image</td>
+        <td>Unit Price</td>
+        <td>Action</td>
+    </tr>
+    <tr *ngFor="let item of products; let i=index">
+        <td align="center">{{i+1}}</td>
+        <td align="center">{{item.Name}}</td>
+        <td align="center"><img [src]="item.ImagePath" [alt]="item.Name" height="200" /></td>
+        <td align="center">{{item.UnitPrice}}</td>
+        <td align="center">
+            <button class="btn btn-success" (click)="cart.addToCart(item.ProductId,item.Name,item.UnitPrice,1)">Add to Cart</button>
+            <a href="javascript:void(0)" (click)="cart.deleteFromCart(item.ProductId)" class="btn btn-warning">Delete</a>
+        </td>
+    </tr>
+</table>

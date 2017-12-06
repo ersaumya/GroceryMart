@@ -1,0 +1,49 @@
+﻿@inherits GroceryMart.WebApp.Security.CustomBasePage
+@{
+    Layout = null;
+    var user = CurrentUser != null ? CurrentUser : new GroceryMart.WebApp.Security.CustomPrincipal("");
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <title>GroceryMart | Shopping Site</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    <!--Cryto-->
+    <script src="~/node_modules/crypto-js/core.js"></script>
+    <script src="~/node_modules/crypto-js/crypto-js.js"></script>
+    <script src="~/node_modules/crypto-js/sha512.js"></script>
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="~/node_modules/core-js/client/shim.min.js"></script>
+    <script src="~/node_modules/zone.js/dist/zone.js"></script>
+    <script src="~/node_modules/systemjs/dist/system.src.js"></script>
+    <script src="ClientApp/systemjs.config.js"></script>
+    <script>
+        System.import('ClientApp/main.js').catch(function (err) { console.error(err); });
+        var token = "@user.Token";
+        var user = {
+            userId: '@user.UserId',
+            name: '@user.Name',
+            username: '@user.Username',
+            contactNo: '@user.ContactNo',
+        }
+    </script>
+</head>
+<body>
+        <my-app>Loading...</my-app>
+        <footer>
+            <p>&copy; @DateTime.Now.Year - GroceryMart Pvt. Ltd</p>
+        </footer>
+   
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
+

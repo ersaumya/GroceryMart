@@ -1,0 +1,47 @@
+﻿<h2>Cart</h2>
+<div class="row">
+    <div class="col-sm-8">
+        <div [hidden]="!cart.Items.length == 0">
+            Your cart is empty!
+        </div>
+        <table class="table table-bordered" *ngIf="cart.Items.length>0">
+            <!-- header -->
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+            <tr *ngFor="let item of cart.Items">
+                <td>{{item.Name}}</td>
+                <td>
+                    <div class="input-group">
+                        <input class="form-control" type="text" [(ngModel)]="item.Quantity" style="width:60px" /> &nbsp;
+                        <button class="btn btn-success" type="button" [disabled]="item.Quantity < 1" (click)="cart.addToCart(item.ProductId, item.Name, item.UnitPrice, 1)"> + </button>            &nbsp;
+                        <button class="btn btn-inverse" type="button" [disabled]="item.Quantity <= 1" (click)="cart.addToCart(item.ProductId, item.Name, item.UnitPrice, -1)"> - </button>
+                    </div>
+                </td>
+                <td>{{item.UnitPrice * item.Quantity | currency:"INR"}}</td>
+                <td title="Remove from cart">
+                    <button class="btn btn-danger" type="button" (click)="cart.deleteFromCart(item.ProductId)"> X </button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><b>Grand Total</b></td>
+                <td><b>{{cart.Total| currency :"INR"}}</b></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-sm-4">
+        <p>
+            <a class="btn btn-block btn-success" [routerLink]="['']">Continue Shopping >> </a>
+            <button class="btn btn-block btn-danger" (click)="cart.clearCart()" [disabled]="cart.Total < 1"> Clear Cart </button>
+        </p>
+        <br /><br />
+        <p>
+            <button class="btn btn-block btn-primary" (click)="checkout()" [disabled]="cart.Total < 1"> Check out using PayUmoney </button>
+        </p>
+    </div>
+</div>
